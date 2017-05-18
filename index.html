@@ -1,0 +1,59 @@
+<html>
+<head>
+  <title>Mimic Me!</title>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://download.affectiva.com/js/3.2/affdex.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" />
+  <link rel="stylesheet" href="mimic.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="row top">
+      <div class="col-md-8 left">
+        <div id="camera"></div>
+      </div>
+      <div class="col-md-4 right">
+        <h4>Mimic Me!</h4>
+        <div id="game">
+          <div id="target">?</div>
+          <div id="score">Score: 0 / 0</div>
+        </div>
+        <div id="controls">
+          <button id="start" onclick="onStart()">Start</button>
+          <button id="stop" onclick="onStop()">Stop</button>
+          <button id="reset" onclick="onReset()">Reset</button>
+        </div>
+        <div id="instructions">
+          <h5>INSTRUCTIONS</h5>
+          <p>
+            <ul>
+              <li>Press <strong>Start</strong> to initialize the detector.</li>
+              <li>Your current emoji will be shown next to your head.</li>
+              <li>Mimic each emoji being displayed to score a point!</li>
+              <li>Press <strong>Stop</strong> to end the detector.</li>
+              <li>Watch the tracking results and log messages for more information.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row bottom">
+      <div class="col-md-8 left" id="instructions">
+        <div id="results-container">
+          <h5>EMOTION TRACKING RESULTS</h5>
+          <div id="results"></div>
+        </div>
+      </div>
+      <div class="col-md-4 right">
+        <div id="logs-container">
+          <h5>DETECTOR LOG MSGS</h5>
+          <p id="logs"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="mimic.js"></script>
+</body>
+</html>
